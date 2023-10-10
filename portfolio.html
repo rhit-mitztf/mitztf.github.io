@@ -9,42 +9,50 @@
     <link rel="icon" href="images/favicon.png" />
   </head>
   <body id="portfolio">
+    <header>
+      <h1>Theodore Mitz</h1>
+    </header>
     <nav>
       <ul>
         <li><a href="index.html">About</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="resume.html">Resume</a></li>
+        <li><button id="dark-mode-toggle">Dark/Light</button></li>
       </ul>
     </nav>
     <main>
       <h1>Portfolio</h1>
       <ul id="portfolioItems">
         <li>
-          <h2><a href="#">Project 1 name</a></h2>
-          <img src="images/portfolio/project1.png" />
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempus
-            imperdiet nulla malesuada pellentesque elit eget gravida cum sociis.
-            Facilisi nullam vehicula ipsum a arcu.</p>
-          <a href="#">Link</a>
+          <h2><a href="#">Autonomous Vehicle</a></h2>
+          <img src="images/portfolio/autonomousCar.jpeg" />
+          <p>This project was the main focus of my Junior Design course. It involved developing
+            a supercapacitor-based energy storage system to power a remote-control car, and developing
+            software to control the car's speed and direction, enabling it to autonomously naviagate a track.
+            I was responsible for developing the control software for the car, which involved interfacing with
+            a Pixycam computer vision camera, a brushless motor, and steering servos, all through an ESP32 microcontroller.
+            Our project had mixed degrees of success, with our software being solid, but our supercapacitor system
+            not being ablet to provide the power we needed to properly navigate the track.</p>
         </li>
         <li>
-            <h2><a href="#">Project 2 name</a></h2>
-            <img src="images/portfolio/project2.png" />
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempus
-              imperdiet nulla malesuada pellentesque elit eget gravida cum sociis.
-              Facilisi nullam vehicula ipsum a arcu.</p>
-            <a href="#">Link</a>
+            <h2><a href="#">Vaping Cessation Device</a></h2>
+            <img src="images/portfolio/noVape.jpg" />
+            <p>This project involved developing a vaping cessation device from the ground up for a 
+              startup trying to help people successfully quit vaping. I was responsible for firmware
+              development, which was done on a TI CC26xx series microcontroller, and also aided in 
+              fleshing out the final enclousre design. One of the most challenging aspects of the project
+              was developing drivers for a 128x64 OLED display, along with a user interface that could be 
+              easily navigated using only one button.</p>
         </li>
         <li>
-            <h2><a href="#">Project 3 name</a></h2>
-            <img src="images/portfolio/project3.png" />
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempus
-              imperdiet nulla malesuada pellentesque elit eget gravida cum sociis.
-              Facilisi nullam vehicula ipsum a arcu.</p>
-            <a href="#">Link</a>
+            <h2><a href="#">Alarm Clock</a></h2>
+            <img src="images/portfolio/alarmClock.jpg" />
+            <p>For my embedded systems course's final project, I developed a small alarm clock.It used an 
+              RTC (Real-Time Clock) module to keep track of the time, and a piezo buzzer to act as the alarm. 
+              The clock could keep track of day, date, hours, minutes, and seconds, and had a single alarm 
+              function that could be set and turned on or off as needed. Several LEDs were used as
+              indicators, and the display was a simple 2-row Hitachi HD44780 LCD display.</p>
+            </p>
         </li>
       </ul>
     </main>

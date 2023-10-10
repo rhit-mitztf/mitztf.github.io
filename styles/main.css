@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lato&display=swap');
+:root {
+    --vertical-space: 2rem;
+    --horizontal-space: 3rem;
+    --light-color: #8C8B8C;
+    --body-color: #262626;
+    --heading-color: #2C3E50;
+    --contrast-color: #2980B9;
+    --superlight-color: rgb(236,240,241);
+}
+
+body {
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: 'Lato', sans-serif;
+    color: var(--body-color);
+    background-color: #518bb8;
+    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+}
+
+body.dark-mode {
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: 'Lato', sans-serif;
+    color: var(--superlight-color);
+    background-color: black;
+    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+}
+
+main {
+    background-color: rgba(236,240,241, 0.8);
+}
+
+main.dark-mode {
+    background-color: rgb(22, 30, 39);
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+    font-family: 'Bree Serif', serif;
+    color: var(--heading-color);
+}
+
+h1.dark-mode, h2.dark-mode, h3.dark-mode {
+    color: var(--superlight-color);
+}
+
+a {
+    color: var(--body-color);
+    text-decoration-color: var(--contrast-color);
+}
+
+a.dark-mode {
+    color: var(--superlight-color);
+    text-decoration-color: var(--contrast-color);
+}
+
+a:hover {
+    color: var(--contrast-color);
+}
+
+body#about img {
+    height: 15em;
+}
+
+p {
+    max-width: 50em;
+}
+
+body {
+    display: grid;
+    grid-template-areas: "head head"
+                         "nav  nav"
+                         "main main"
+                         "foot  foot";
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto auto 1fr auto;
+}
+
+@media screen and (min-width: 25em) {
+    body {
+        grid-template-areas:  "head  head"
+                                "nav main"
+                                "foot foot";
+        grid-template-rows: auto 1fr auto;
+    }
+}
+
+body > * {
+    padding-left: var(--horizontal-space);
+    padding-right: var(--horizontal-space);
+}
+
+body > header {
+    grid-area: head;
+}
+
+body > nav {
+    grid-area: nav;
+}
+
+body > nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+body > main {
+    grid-area: main;
+}
+
+body > footer {
+    grid-area: foot;
+}
+
+header, footer {
+    padding-top: var(--vertical-space);
+    padding-bottom: var(--vertical-space);
+}
+
+header h1, footer h1 {
+    margin: 0;
+}
+
+body#portfolio ul#portfolioItems {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    list-style-type: none;
+    padding: 0;
+}
+
+@media screen and (min-width: 25em) {
+    body#portfolio ul#portfolioItems li {
+        flex-basis: 48%;
+        padding-right: 2%;
+    }
+    body > main {
+        margin-right: 1em;
+    }
+}
+
+body#portfolio ul#portfolioItems li img {
+    max-width: 100%;
+}
